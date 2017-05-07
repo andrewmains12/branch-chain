@@ -119,7 +119,8 @@ def parse_starting_branch(branches, start):
 
     return start
 
-if __name__ == "__main__":
+
+def main():
     parser = argparse.ArgumentParser(description="Rebase a chain of branches")
 
     parser.add_argument("action", help="The thing to do", choices=ACTIONS.keys())
@@ -142,3 +143,7 @@ if __name__ == "__main__":
 
     print "Performing %s on %s" % (args.action, branches)
     ACTIONS[args.action](branches, starting_branch, args)
+
+
+if __name__ == "__main__":
+    main()
