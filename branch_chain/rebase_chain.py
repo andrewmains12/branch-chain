@@ -127,7 +127,12 @@ def main():
     parser.add_argument("to_rebase",
                         help="File containing new line delimited list of branches to rebase")
 
-    parser.add_argument("-s", "--start", default="CURRENT")
+    parser.add_argument("-s", "--start", default="CURRENT",
+                        help="""The name of the branch to start on. We respect 2 special values here:
+    CURRENT: the current branch (default)
+    START: the *second* branch in the list (the first should be master/the based)
+"""
+    )
     parser.add_argument('-ni', "--no-interactive", help="Run rebases without -i", action='store_true')
     parser.add_argument('--force-push', help='git force push (push -f)', action='store_true')
     parser.add_argument('--diff-message', help='Message to use with arc diff', default='rebase')
