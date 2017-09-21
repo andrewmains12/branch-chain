@@ -6,7 +6,7 @@ version = '0.1.0'
 setup(
     name="rebase-chain",
     author="Andrew Mains",
-    author_email="amains@uber.com",
+    author_email="amains12@gmail.com",
     description="Script to deal with chains of git branches",
     version=version,
     packages=find_packages(),
