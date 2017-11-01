@@ -58,7 +58,7 @@ def rebase_chain(branches, starting_branch, no_interactive=False):
 def arc_diff_onto(prev_branch, branch, message):
     subprocess.check_call("git checkout %s" % branch, shell=True)
 
-    subprocess.check_call(["arc", "diff", prev_branch, "--message", message])
+    subprocess.check_call(["arc", "diff", prev_branch, "--message", message, "--allow-untracked"])
 
 
 def arc_diff_chain(branches, starting_branch, message='rebase'):
